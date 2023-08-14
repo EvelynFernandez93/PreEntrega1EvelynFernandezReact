@@ -21,9 +21,9 @@ const NavBar = () => {
             <li className="nav-item  dropdown">
                 <a className="nav-link text-light k dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">PRODUCTOS</a>
                 <ul class="dropdown-menu ">
-                  <li><a class="dropdown-item" href="#">Pantalones</a></li>
-                  <li><a class="dropdown-item" href="#">Remeras</a></li>
-                  <li><a class="dropdown-item" href="#">Camperas</a></li> 
+                  <li><a className="dropdown-item" href="#">Pantalones</a></li>
+                  <li><a className="dropdown-item" href="#">Remeras</a></li>
+                  <li><a className="dropdown-item" href="#">Camperas</a></li> 
                 </ul> 
             </li>   
             
