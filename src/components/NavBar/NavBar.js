@@ -1,8 +1,9 @@
 import React from 'react';
 import CartWidget from "../CartWidget/CartWidget";
 import imagenDiagnovet from "../NavBar/assets/diagnovet.jpeg";
+import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+export default function NavBar() {
   return (
     <div>
       <nav class="container-fluid justify-content-end">
@@ -21,9 +22,10 @@ const NavBar = () => {
             <li className="nav-item  dropdown">
                 <a className="nav-link text-light k dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">PRODUCTOS</a>
                 <ul class="dropdown-menu ">
-                  <li><a className="dropdown-item" href="#">Pantalones</a></li>
-                  <li><a className="dropdown-item" href="#">Remeras</a></li>
-                  <li><a className="dropdown-item" href="#">Camperas</a></li> 
+                  {/* <li><a className="dropdown-item" href="#">Pantalones</a></li> */}
+                  <li><Link to='category/pantalones' className="dropdown-item" href="#">Pantalones</Link></li>
+                  <li><Link to='category/remeras' className="dropdown-item" href="#">Remeras</Link></li>
+                  <li><Link to='category/abrigos' className ="dropdown-item" href="#">Abrigos</Link></li> 
                 </ul> 
             </li>   
             
@@ -39,4 +41,3 @@ const NavBar = () => {
   )
 }
 
-export default NavBar

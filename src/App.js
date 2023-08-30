@@ -1,17 +1,7 @@
-
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-
-
+import Router from './router/Router';
 function App() {
-  return (
-    <div className="App" >
-    <NavBar />
-    <ItemListContainer  greeting='Bienvenidos a mi Eccomerce' />
-    
-    </div>
-  );
+  return <Router />
 }
 
 export default App;
