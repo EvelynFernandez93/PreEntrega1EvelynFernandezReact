@@ -17,7 +17,6 @@ export default function Router() {
         <Route path="/" element={<ItemListContainer />} /> {/* aquí colocamos el componente principal, que queremos ver apenas abrimos nuestra app */}
         <Route path="/category/:id" element={<ItemListContainer />} />
         <Route path="/item/:id" element={<ItemDetailConteiner />} />
-       {/*  <Route path="users/*" element={<Users />} /> */}
       </Routes>
     </BrowserRouter>
   )

@@ -1,19 +1,18 @@
-
-import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 
-export default function ItemDetail({ detail }) {
+
+export default function ItemDetail({producto}) {
   
   return (
     
     
    <><div>
       <div className="card mb-3">
-        <img  /* src={detail.image}  */  class="card-img-top" alt="..."></img>
+        <img  src="{producto.image} "  className="card-img-top" alt="..."></img>
         <div className="card-body">
-          <h5 className="card-title">nombre</h5>
+          <h5 className="card-title">name</h5>
           <p className="card-text">detalle</p>
-          <p className="card-text"><small class="text-muted">consultar tabla de talles</small></p>
+          <p className="card-text"><small className="text-muted">consultar tabla de talles</small></p>
         </div>
       </div>
 
