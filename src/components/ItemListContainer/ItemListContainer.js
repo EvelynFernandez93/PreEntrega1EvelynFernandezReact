@@ -35,7 +35,7 @@ export default function ItemListContainer() {
             <div className="card-body text-center">
               <h5 className="card-title text-center" >{item.name}</h5>
               <p className="card-text">{item.description}</p>
-              <Link to={'/item/id'} className="btn btn-primary">Ver más</Link>
+              <Link to={'/item/${item.id}/'} className="btn btn-primary">Ver más</Link>
             </div>
             
           </div>

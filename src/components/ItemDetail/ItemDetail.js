@@ -8,19 +8,17 @@ export default function ItemDetail({producto}) {
     
    <><div>
       <div className="card mb-3">
-        <img  src="{producto.image} "  className="card-img-top" alt="..."></img>
+        <img src={producto.image} className="card-img-top" alt="..."></img>
         <div className="card-body">
-          <h5 className="card-title">name</h5>
-          <p className="card-text">detalle</p>
+          <h5 className="card-title">{producto.name}</h5>
+          <p className="card-text">{producto.description}</p>
           <p className="card-text"><small className="text-muted">consultar tabla de talles</small></p>
         </div>
       </div>
-
-
     </div><div>
         <ItemCount />
-      </div>
-    </>
+      </div></>
+    
   )
 }
 
