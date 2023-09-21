@@ -1,4 +1,6 @@
 import ItemCount from '../ItemCount/ItemCount'
+//import { useContext, useState } from 'react'
+//import { CartContext } from '../../context/CartContext'
 
 
 export default function ItemDetail({producto}) {
@@ -8,7 +10,7 @@ export default function ItemDetail({producto}) {
     
    <><div>
       <div className="card mb-3">
-        <img src={producto.image} className="card-img-top" alt="..."></img>
+        <img src={producto.image} className="card-img-top w-25 p-3" alt="..."></img>
         <div className="card-body">
           <h5 className="card-title">{producto.name}</h5>
           <p className="card-text">{producto.description}</p>
