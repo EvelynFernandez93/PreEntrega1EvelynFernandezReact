@@ -4,13 +4,14 @@ import imagenDiagnovet from "../NavBar/assets/diagnovet.jpeg"
 import { Link } from 'react-router-dom'
 
 
+
 export default function NavBar() {
   
 
   return (
     <div>
       <nav className="container-fluid justify-content-end">
-        <div className="bg-teal-400 navbar navbar-dark bg-dark ">{/* mi eccomerce es la imagen del nombre del laboratorio */}
+        <div className="bg-teal-400 navbar navbar-dark bg-dark ">
             <a className="navbar-brand d-flex ms-5  " ></a> 
             <Link to='/'>
               <img src={imagenDiagnovet} alt="" width="200" height="100" className="d-inline-block align-text-top"></img>
@@ -20,6 +21,10 @@ export default function NavBar() {
             <ul className="nav navbar navbar-dark bg-dark justify-content-end ">
             <li className="nav-item">
                 <Link to='/' className="nav-link text-light"  aria-current="page" >INICIO</Link>
+                
+            </li>
+            <li className="nav-item">
+                <Link to='/formulario' className="nav-link text-light"  aria-current="page" >FORMULARIO</Link>
                 
             </li>
             {/* <li className="nav-item">

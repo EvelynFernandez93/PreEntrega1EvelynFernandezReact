@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import { useState } from 'react'
 
 export default function ItemCount() {
@@ -20,3 +20,4 @@ export default function ItemCount() {
     </div>
   )
 }
+ */
