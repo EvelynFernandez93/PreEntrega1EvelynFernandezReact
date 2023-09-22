@@ -1,35 +1,39 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import ItemList from '../ItemList/ItemList'
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../Firebase/config"
+import ItemList from "../ItemList/ItemList";
 
+const ItemListContainer = () => {
 
+    const [productos, setProductos] = useState([]);
 
-export default function ItemListContainer() {
-  const [items, setItems] = useState ([])
-  const {id} = useParams()
+    const [titulo, setTitulo] = useState("Productos");
 
-  
-  useEffect(() => {
-    const getProducts = async () => {
-      const response = await fetch('/data/products.json')
-      const products = await response.json()
-  
-      const filteredProducts = products.filter(product => product.category === id)
-      
-      if(filteredProducts.length > 0) return setItems (filteredProducts)
-      
+    const categoria = useParams().categoria;
 
-      setItems(products)
-    }
-  
-    getProducts()
-  }, [id])
+    useEffect(() => {
 
+      const productoRef = collection(db, "producto");
+
+      const q = categoria ? query(productoRef, where("categoria", "==", categoria)) : productoRef;
+
+      getDocs(q)
+        .then((resp) => {
+          setProductos(
+            resp.docs.map((doc) => {
+              return { ...doc.data(), id: doc.id }
+            })
+          )
+        })
+        setTitulo("Colección 2023");
+    }, [categoria])
+    
   return (
-   
     <div>
-     <ItemList items={items} />
+        <ItemList productos={productos} titulo={titulo} />
     </div>
   )
 }
+
+export default ItemListContainer

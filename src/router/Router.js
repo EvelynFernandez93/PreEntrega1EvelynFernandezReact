@@ -4,26 +4,33 @@ import {
   Route
 } from "react-router-dom";
 import NavBar from '../components/NavBar/NavBar'
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
-import ItemDetailConteiner from '../components/ItemDetailContainer/ItemDetailContainer';
-import Formulario from "../components/Formulario/Formulario";
+
+
 
 import {  CartProvider } from "../Context/CartContext";
-
+import Contacto from "../components/Contacto/Contacto";
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
+import Checkout from "../components/Checkout/Checkout";
+import Carrito from "../components/Carrito/Carrito";
 
 export default function Router() {
   
   return (
     <CartProvider>
       <BrowserRouter>
-
         <NavBar />
-
         <Routes> 
-          <Route path="/" element={<ItemListContainer />} /> 
-          <Route path="/category/:id" element={<ItemListContainer />} />
-          <Route path="/item/:id" element={<ItemDetailConteiner/>} />
-          <Route path="/formulario" element={<Formulario />} />
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />}/>
+          <Route path="/productos" element={<ItemListContainer />} />
+          <Route path="/productos/:categoria" element={<ItemListContainer />} />
+          <Route path="/contacto" element={<Contacto />} /> 
+          <Route path="/carrito" element={<Carrito />}/>
+          <Route path="/checkout" element={<Checkout />}/>
+         
+          
+          
         </Routes>
     </BrowserRouter>
     </CartProvider>

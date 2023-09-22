@@ -1,23 +1,17 @@
-/* import React from 'react'
-import { useState } from 'react'
+import React from 'react'
 
-export default function ItemCount() {
-    const [cont, setCont] = useState(1)
-
-    const agregarUnidad = () => {
-        setCont(cont + 1)
-    }
-
-    const restarUnidad = () => {
-        (cont > 0) && setCont(cont - 1)
-    }
+const ItemCount = ( {cantidad, handleRestar, handleSumar, handleAgregar} ) => {
 
   return (
     <div>
-        <button onClick={restarUnidad} className="btn btn-secondary btn-sm">-</button>
-        <span className="btn btn-secondary btn-sm">{cont}</span>
-        <button onClick={agregarUnidad} className="btn btn-secondary btn-sm">+</button>
+        <div className="item-count">
+            <button onClick={handleRestar}>-</button>
+            <p>{cantidad}</p>
+            <button onClick={handleSumar}>+</button>
+        </div>
+        <button className="agregar-al-carrito" onClick={handleAgregar}>Agregar al carrito</button>
     </div>
   )
 }
- */
+
+export default ItemCount
