@@ -28,9 +28,6 @@ export default function Router() {
           <Route path="/contacto" element={<Contacto />} /> 
           <Route path="/carrito" element={<Carrito />}/>
           <Route path="/checkout" element={<Checkout />}/>
-         
-          
-          
         </Routes>
     </BrowserRouter>
     </CartProvider>
