@@ -5,6 +5,8 @@
 *npm i react-bootstrap<br>
 *npm i bootstrap<br>
 *npm i react-router-dom<br>
+*npm i react-icons --save<br>
+*npm i react-hook-form<br> 
 *npm i firebase</p>
 <h1 class="code-line" data-line-start=11 data-line-end=12 ><a id="En_el_diario_11"></a>En el diario:</h1>
 <p class="has-line-data" data-line-start="12" data-line-end="15">*git add .<br>
